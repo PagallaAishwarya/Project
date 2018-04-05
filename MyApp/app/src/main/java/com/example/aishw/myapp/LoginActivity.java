@@ -69,10 +69,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         // Set up the login form.
-        mEmailView = (AutoCompleteTextView) findViewById(R.id.UserName);
+        mEmailView = (AutoCompleteTextView) findViewById(R.id.te1);
         populateAutoComplete();
 
-        mPasswordView = (EditText) findViewById(R.id.password);
+        mPasswordView = (EditText) findViewById(R.id.te2);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
@@ -84,7 +84,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
         });
 
-        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
+        Button mEmailSignInButton = (Button) findViewById(R.id.b2);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {

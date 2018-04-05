@@ -4,27 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/darker_gray"
+    android:background="@android:color/background_light"
     tools:context="com.example.aishw.myapp.MainActivity"
     tools:layout_editor_absoluteY="81dp">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:autoSizeTextType="uniform"
         android:text="@string/repo"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.577" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/b2"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,25 +37,57 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:onClick="input"
         android:background="@android:color/holo_orange_dark"
         android:text="@string/go"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.807"
+        app:layout_constraintHorizontal_bias="0.892"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498" />
+        app:layout_constraintVertical_bias="0.584"
+        />
 
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@android:drawable/ic_menu_info_details"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@android:drawable/ic_menu_info_details" />
+
+    <ImageView
+        android:id="@+id/iv2"
+        android:layout_width="188dp"
+        android:layout_height="124dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.863"
+        app:srcCompat="@android:drawable/ic_lock_lock" />
+
+    <ImageView
+        android:id="@+id/iv1"
+        android:layout_width="wrap_content"
+        android:layout_height="210dp"
+        app:srcCompat="@drawable/r1"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
 
 </android.support.constraint.ConstraintLayout>
